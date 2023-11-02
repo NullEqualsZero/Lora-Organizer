@@ -10,7 +10,7 @@ A simple program to organize LoRAs for Stable Diffusion
 
 
 ## Modify??
-If you need to modify the code for any reason feel free to do so.
+If you need to modify the code for any reason feel free to do so (obvisouly you modify the python file).
 
 ## What if i also need a .exe file 
 *   Then you need pyinstaller
