@@ -20,3 +20,5 @@ If you need to modify the code for any reason feel free to do so (obvisouly you 
 *   If for some reason that doesnt work you can also use this 
     (modify to your pc)
     `Start-Process -NoNewWindow -FilePath "PATH_TO_PYTHON_APPDATA_FOLDER/LocalCache\local-packages\Python310(OR your python version)\Scripts\pyinstaller.exe" -ArgumentList "--onefile", "LoRA_Organization_Program.py"`
+
+    Basically you need the path to pyinstaller.exe
