@@ -22,3 +22,12 @@ If you need to modify the code for any reason feel free to do so (obvisouly you 
     `Start-Process -NoNewWindow -FilePath "PATH_TO_PYTHON_APPDATA_FOLDER/LocalCache\local-packages\Python310(OR your python version)\Scripts\pyinstaller.exe" -ArgumentList "--onefile", "LoRA_Organization_Program.py"`
 
     Basically you need the path to pyinstaller.exe
+
+    Or you can find first the Sricpts folder (PATH_TO_PYTHON_APPDATA_FOLDER/LocalCache\local-packages\Python310(OR your python version)\Scripts) and add it to PATH
+
+#####
+If you don't know how to do:
+* Open `Edit the system enviromment varilables`
+* Click `Environmment Variables...`
+* On `System variable` find `Path` click it and select `Edit...`
+* Click `New` and add the folder path of Scripts 
