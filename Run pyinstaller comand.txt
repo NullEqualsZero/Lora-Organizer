@@ -1,3 +1,0 @@
-Start-Process -NoNewWindow -FilePath "C:\Users\nulle\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\pyinstaller.exe" -ArgumentList "--onefile", "LoRA_Organization_Program.py"
-or if it works for you pyinstaller  LoRA_Organization_Program.py --onefile
-(you need pyinstaller for this if you dont have it run pip install pyinstaller)
