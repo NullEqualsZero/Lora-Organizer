@@ -2,9 +2,6 @@ import os
 import shutil
 import re
 
-lora_folder_path = r"C:\Users\nulle\Lora_Org\Lora"
-ignored_file = "LoRA_Organization_Program.py"  # Name of the file to be ignored
-
 def extract_prefix(file_name):
     # Use regular expression to extract the prefix
     prefix_match = re.match(r'^[\w\s\-]+', file_name)
@@ -14,16 +11,13 @@ def extract_prefix(file_name):
         return None
 
 def organize_loras(lora_folder_path):
-    # Get a list of all files in the lora folder
+    # Get a list of all files in the specified directory
     lora_files = os.listdir(lora_folder_path)
 
     # Create a dictionary to store files based on their prefixes
     file_dict = {}
 
     for lora_file in lora_files:
-        if lora_file == ignored_file:
-            continue  # Skip the specified file
-
         # Get the prefix of the LoRA file
         lora_prefix = extract_prefix(lora_file)
 
@@ -42,6 +36,11 @@ def organize_loras(lora_folder_path):
 
         for lora_file in files:
             lora_file_path = os.path.join(lora_folder_path, lora_file)
-            shutil.move(lora_file_path, os.path.join(lora_folder, lora_file))
 
-organize_loras(lora_folder_path)
+            # Check if the source and destination paths are different
+            if os.path.abspath(lora_folder) != os.path.abspath(lora_file_path):
+                shutil.move(lora_file_path, os.path.join(lora_folder, lora_file))
+
+if __name__ == "__main__":
+    lora_folder_path = input("Enter the destination directory: ")
+    organize_loras(lora_folder_path)
